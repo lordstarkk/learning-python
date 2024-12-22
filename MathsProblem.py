@@ -54,19 +54,19 @@ while True:
         startTime = time.time()
         if q == "y":
             for i in range(number_of_ques):
-                expr, answer = problemGenrator()
+                expr, answer = hardProblemGenrator()
                 while True:
                     guess = input(f"#{i+1}. {expr} = ")
                     if guess == str(answer):
                         print("Correct Answer!\n")
                         break
                     elif guess == "s":
-                        expr, answer = problemGenrator()
+                        expr, answer = hardProblemGenrator()
                     elif guess != str(answer):
                         print("Wrong Answer")
                         print(f"Corrent Answer: {answer}\n")
                         wrong=+1
-                        expr, answer = problemGenrator()
+                        expr, answer = hardProblemGenrator()
                         break
             endTIme = time.time()
             final = endTIme-startTime
