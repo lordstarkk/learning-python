@@ -5,7 +5,7 @@ import pyttsx3
 def say(speech):
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
+    engine.setProperty('voice', voices[0].id)
     rate = engine.getProperty('rate')
     engine.setProperty('rate', 160)
     pyttsx3.speak(speech)
@@ -56,14 +56,14 @@ def winddir():
         print("North")
     return windr
 
-say(f"the current temprature in {city} {region} is {temp} degree celsius, feels like {feellike}")
 print(f"The current temprature in {city} is {temp} degree celsius, feels like {feellike}")
+say(f"the current temprature in {city} {region} is {temp} degree celsius, feels like {feellike}")
 
-say(f"Condition: {condition}")
 print(f"Condition: {condition}")
+say(f"Condition: {condition}")
 
-say(f"Wind: {wind}km/h")
 print(f"Wind: {wind}km/h")
+say(f"Wind: {wind}km/h")
 
 if windr == "W":
     print("Direction: West")
@@ -75,13 +75,13 @@ else:
     print("Direction: North")
 
 
-say(f"Heat index: {heatidx}")
 print(f"Heat index: {heatidx}")
+say(f"Heat index: {heatidx}")
 
 print(f"Country: {region}\nState: {country} \nTime zone: {tz_id}")
 
 
-say(f"Last updated at:{last_updted}")
 print(f"Last updated at:{last_updted}")
+say(f"Last updated at:{last_updted}")
 
 print("Created by Stark")

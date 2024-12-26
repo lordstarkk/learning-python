@@ -134,7 +134,7 @@ while True:
                         break
             endTIme = time.time()
             final = endTIme-startTime
-            correct = 10-wrong
+            correct = number_of_ques-wrong
             print(f"Correct Answers: {int(correct)}")
             print(f"You did it in {int(final)} Seconds")
             o = input("\nWanna play again? ")
